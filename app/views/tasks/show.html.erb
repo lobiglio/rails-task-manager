@@ -1,12 +1,16 @@
-<h1><%= @task.title %></h1>
-
+<div class="top-page">
+  <h1><%= @task.title %></h1>
+  <%= link_to "Edit your task", edit_task_path %>
+</div>
+<div class="details">
 <p><%= @task.details %></p>
-
-<p><% if @task.completed %>
-    Done!
-  <% else %>
-    To Do!
-  <% end %>
-</p>
-
+</div>
+<div class="completed">
+  <p><% if @task.completed %>
+      <i class="far fa-check-square"></i> Done!
+    <% else %>
+      <i class="far fa-square"></i> To Do!
+    <% end %>
+  </p>
+</div>
 <%= link_to "Back to your tasks", tasks_path %>

@@ -1,12 +1,20 @@
 <h1>My tasks</h1>
-<ul>
-  <% @tasks.each do |task| %>
-    <li><% if task.completed %>
-        [X] <%= link_to task.title, task_path(task) %>
-      <% else %>
-        [ ] <%= link_to task.title, task_path(task) %>
-      <% end %>
-      </li>
-  <% end %>
-</ul>
+<div class="list">
+  <ul>
+    <% @tasks.each do |task| %>
+      <li><% if task.completed %>
+          [X] <%= link_to task.title, task_path(task) %> -
+          <%= link_to task_path(task), data: {confirm: 'Do you want to confirm the delete?'}, method: :delete do %>
+            <i class="fas fa-trash-alt"></i>
+          <% end %>
+        <% else %>
+          [ ] <%= link_to task.title, task_path(task) %> -
+          <%= link_to task_path(task), data: {confirm: 'Do you want to confirm the delete?'}, method: :delete do %>
+            <i class="fas fa-trash-alt"></i>
+          <% end %>
+        <% end %>
+        </li>
+    <% end %>
+  </ul>
+</div>
 <%= link_to "Add a new task", new_task_path, class: "add-form" %>

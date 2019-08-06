@@ -35,3 +35,37 @@ ul li {
 .btn {
   margin-bottom: 48px;
 }
+
+.top-page {
+  display: flex;
+  justify-content: space-between;
+}
+
+.details {
+  padding: 12px;
+  background-color: #faf5ef;
+  box-shadow: 1px 1px 1px #d7d1c9;
+  text-align: left;
+  margin-bottom: 32px;
+  border-radius: 4px;
+}
+
+.completed {
+  font-weight: bold;
+  text-align: left;
+  border-bottom: 1px solid #d7d1c9;
+  margin-bottom: 24px;
+}
+
+h1 {
+  color: #61234e;
+}
+
+.field {
+  text-align: left;
+}
+
+.list {
+  background-color: #faf5ef;
+  box-shadow: 1px 1px 1px #d7d1c9;
+}
